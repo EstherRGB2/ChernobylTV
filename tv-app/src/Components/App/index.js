@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Home from '../Home';
 import ShowDetails from '../ShowDetails';
 import SearchResults from '../SearchResults';
@@ -8,9 +8,19 @@ import AllShows from '../AllShows';
 function App() {
   return (
       <div>
-
-        <AllShows />
+   <Routes>
+    <Route path="/" element={<MainPage />} />
+    <Route path="/shows/:showId" element={<ShowDetails />} />
+  </Routes>
       </div>
+  );
+}
+function MainPage() {
+  return (
+    <div>
+      <Home />
+      <AllShows />
+    </div>
   );
 }
 export default App;
