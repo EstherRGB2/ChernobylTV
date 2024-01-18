@@ -1,6 +1,68 @@
+.App {
+  text-align: center;
+}
+
+nav {
+  background-color: #282c34;
+  min-height: 5vh;
+  display: flex;
+  flex-direction: row; /* Change to row for horizontal layout */
+  justify-content: space-between; /* Add space between GMDB and Search */
+  align-items: center;
+  padding: 10px; /* Add padding for spacing */
+  font-size: 32px;
+  color: white;
+}
+
+.HomeLink {
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+}
+
 .shows--card {
   display: inline-block;
   margin: 10px;
   width: 23%; /* Adjust the width to fit four items in a row */
-  box-sizing: border-box; /* Include padding and borders in the element's total width and height */
+  box-sizing: border-box;
+}
+
+.movie {
+  width: 20%;
+  margin: 2px 2px;
+}
+
+.Search {
+  display: flex;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 5px;
+  font-size: 16px;
+}
+
+.Search input[type="text"] {
+  height: 2em;
+}
+
+.submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: orangered;
+  background-color: #282c34;
+  border-radius: 10px;
+  padding: 2px;
+  margin: 5px;
+  height: 2em;
+  border-color: orangered;
+  text-align: center; /* Center the text */
+  width: 100px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.submit:hover {
+  color: #282c34;
+  background-color: orangered;
+  border-color: #282c34;
 }

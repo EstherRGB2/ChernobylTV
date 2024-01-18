@@ -8,7 +8,7 @@ import AllShows from '../AllShows'
 function App() {
   return (
       <div>
-
+        <Home />
         <AllShows />
       </div>
   );
