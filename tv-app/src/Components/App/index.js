@@ -1,4 +1,6 @@
 import React from 'react';
+//App.js
+
 import { Routes, Route } from 'react-router-dom';
 import Home from '../Home';
 import ShowDetails from '../ShowDetails';
@@ -10,6 +12,7 @@ function App() {
       <div>
    <Routes>
     <Route path="/" element={<MainPage />} />
+    <Route path="/Components/Home" element={<Home />} />
     <Route path="/shows/:showId" element={<ShowDetails />} />
   </Routes>
       </div>
