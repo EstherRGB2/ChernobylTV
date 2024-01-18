@@ -4,16 +4,12 @@ import Home from '../Home';
 import ShowDetails from '../ShowDetails';
 import SearchResults from '../SearchResults';
 import './App.css';
-
+import AllShows from '../AllShows'
 function App() {
   return (
       <div>
-        <Routes>
-          <Route path="/" element={<Home />} /> {/* Home page route */}
-          <Route path="/movie/:id" element={<ShowDetails />} /> {/* Movie details route */}
-          <Route path="/search" element={<SearchResults />} /> {/* Search results route */}
-        </Routes>
-        <Home />
+
+        <AllShows />
       </div>
   );
 }
