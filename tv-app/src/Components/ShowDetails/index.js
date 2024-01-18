@@ -3,7 +3,7 @@ import { useParams} from 'react-router-dom';
 
 export default function ShowDetails() {
 const { showId } = useParams();
-const { show, setShow } = useState(null)
+const [ show, setShow ] = useState(null)
 useEffect(() => {
 
   const fetchShowDetails = async () => {
@@ -13,7 +13,7 @@ useEffect(() => {
     setShow(data)
   }
   fetchShowDetails();
-}, [showId, setShow]);
+}, [showId]);
 if (!show) {
   return <div>Loading...</div>
 }
