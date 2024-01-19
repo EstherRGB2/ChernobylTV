@@ -41,7 +41,7 @@ function SearchResults({ navigate }) {
       {/* Display search results */}
       {searchResults.length > 0 && (
         <div className = "search-results-container">
-          <h2>Search Results:</h2>
+          <h1 className = "seach-results-container-title">Search Results</h1>
           <ul className = "search-items-container">
           {searchResults.map((result) => (
               <li className = "search-result-item" key={result.show.id}>
