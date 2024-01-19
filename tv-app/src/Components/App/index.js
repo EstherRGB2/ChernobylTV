@@ -7,11 +7,15 @@ import ShowDetails from '../ShowDetails';
 import SearchResults from '../SearchResults';
 import './App.css';
 import AllShows from '../AllShows';
+import AllMovies from '../AllMovies'
+import MovieDetails from '../MovieDetails'
 
 function App() {
   return (
       <div>
    <Routes>
+   <Route path="/movie" element={<AllMovies />} />
+   <Route path="/movie/:movieId" element={<MovieDetails />} />
     <Route path="/" element={<MainPage />} />
     <Route path="/Components/Home" element={<Home />} />
     <Route path="/shows/:showId" element={<ShowDetails />} />

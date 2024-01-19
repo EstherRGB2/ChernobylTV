@@ -26,6 +26,12 @@ nav {
   width: 23%; /* Adjust the width to fit four items in a row */
   box-sizing: border-box;
 }
+.movies--card {
+  display: inline-block;
+  margin: 10px;
+  width: 23%; /* Adjust the width to fit four items in a row */
+  box-sizing: border-box;
+}
 
 .movie {
   width: 20%;
