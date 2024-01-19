@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import AllShows from '../AllShows';
 import SearchResults from '../SearchResults';
 
 function Home() {
-  const navigate = useNavigate();
 
   return (
     <>
@@ -12,13 +11,10 @@ function Home() {
         <Link to="/" className="HomeLink">
           Chernobyl TV
         </Link>
-        <div className="headerContainer">
-          {/* Pass the navigate function to the SearchResults component */}
-          <SearchResults navigate={navigate} />
-        </div>
       </nav>
-
-      {/* Display all shows */}
+      <div className="SearchResultsContainer">
+          <SearchResults />
+      </div>
       <AllShows />
     </>
   );
