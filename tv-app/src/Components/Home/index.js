@@ -11,6 +11,7 @@ function Home() {
         <Link to="/" className="HomeLink">
           Chernobyl TV
         </Link>
+        <Link to="/movie" className="movie-home-button">Go To Movies</Link>
       </nav>
       <div className="SearchResultsContainer">
           <SearchResults />
