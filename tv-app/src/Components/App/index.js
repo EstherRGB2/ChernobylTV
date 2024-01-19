@@ -9,12 +9,13 @@ import './App.css';
 import AllShows from '../AllShows';
 import AllMovies from '../AllMovies'
 import MovieDetails from '../MovieDetails'
+import MoviesNavbar from '../MoviesNavbar'
 
 function App() {
   return (
       <div>
    <Routes>
-    <Route path="/movie" element={<AllMovies />} />
+    <Route path="/movie" element={<MoviesMainPage />} />
     <Route path="/movie/:movieId" element={<MovieDetails />} />
     <Route path="/" element={<MainPage />} />
     <Route path="/Components/Home" element={<Home />} />
@@ -30,6 +31,15 @@ function MainPage() {
     <div>
       <Home />
       <AllShows />
+    </div>
+  );
+}
+
+function MoviesMainPage() {
+  return (
+    <div>
+      <MoviesNavbar />
+      <AllMovies />
     </div>
   );
 }
