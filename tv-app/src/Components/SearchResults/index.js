@@ -46,8 +46,10 @@ function SearchResults({ navigate }) {
           {searchResults.map((result) => (
               <li className = "search-result-item" key={result.show.id}>
                 <Link to={`/shows/${result.show.id}`}>
-                  <img className= "search-result-image" src={result.show.image && result.show.image.medium} alt={result.show.name} />
-                  {result.show.name}
+                  <div className="show-item">
+                    {result.show.image && <img className="search-result-image" src={result.show.image.medium} alt={result.show.name} />}
+                    <p className = "search-result-title">{result.show.name}</p>
+                  </div>
                 </Link>
               </li>
             ))}
