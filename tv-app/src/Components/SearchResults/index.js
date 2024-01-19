@@ -1,18 +1,55 @@
-// SearchResults.js
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-function SearchResults({ searchResults }) {
+function SearchResults({ navigate }) {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [searchResults, setSearchResults] = useState([]);
+
+  const handleSearch = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await fetch(`https://api.tvmaze.com/search/shows?q=${searchQuery}`);
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+
+      const data = await response.json();
+
+      setSearchResults(data);
+      // Use the passed navigate function to redirect to the search results page
+      navigate(`/search?query=${searchQuery}`);
+    } catch (error) {
+      console.error('Error fetching data from TVMaze API', error);
+    }
+  };
+
   return (
     <div>
-      <h2>Search Results:</h2>
-      <ul>
-        {searchResults.map((result) => (
-          <li key={result.show.id}>
-            <Link to={`/show/${result.show.id}`}>{result.show.name}</Link>
-          </li>
-        ))}
-      </ul>
+      <form className="Search" onSubmit={handleSearch}>
+        <input
+          type="text"
+          name="q"
+          placeholder="Search..."
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+        />
+        <input className="submit" type="submit" value="Search" />
+      </form>
+
+      {/* Display search results */}
+      {searchResults.length > 0 && (
+        <div>
+          <h2>Search Results:</h2>
+          <ul>
+            {searchResults.map((result) => (
+              <li key={result.show.id}>
+                <Link to={`/shows/${result.show.id}`}>{result.show.name}</Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </div>
   );
 }

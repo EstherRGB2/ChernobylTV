@@ -7,6 +7,7 @@ import ShowDetails from '../ShowDetails';
 import SearchResults from '../SearchResults';
 import './App.css';
 import AllShows from '../AllShows';
+
 function App() {
   return (
       <div>
@@ -14,10 +15,12 @@ function App() {
     <Route path="/" element={<MainPage />} />
     <Route path="/Components/Home" element={<Home />} />
     <Route path="/shows/:showId" element={<ShowDetails />} />
+    <Route path="/search" element={<SearchResults />} />
   </Routes>
       </div>
   );
 }
+
 function MainPage() {
   return (
     <div>
@@ -26,4 +29,5 @@ function MainPage() {
     </div>
   );
 }
+
 export default App;
