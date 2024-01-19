@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams} from 'react-router-dom';
+import './deets.css'; // importing the css file here from ShowDetails folder
 
 export default function ShowDetails() {
 const { showId } = useParams();
@@ -24,6 +25,13 @@ return (
           <h4>{`Premiered:${show.premiered}`}</h4>
           <p>{show.genres}</p>
           <p>{show.language}</p>
+
+
+           {/* Copyright footer was inserted here. TNT Kuttler Co*/}
+      <footer className="copyright">
+        &copy; {new Date().getFullYear()} TNT Kuttler Co. All Rights Reserved.
+      </footer>
+
         </div>
 )
 }

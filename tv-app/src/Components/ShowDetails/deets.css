@@ -1,0 +1,66 @@
+/* deets.css */
+
+/* Body styles (Apply only to the ShowDetails page) */
+.show-details-body {
+  background-color: #000; /* Dark black background */
+  color: #fff; /* White text color */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center; /* trying to center content horizontally */
+  align-items: center; /* tryna center content vertically */
+  height: 100vh; /* make the content full height of the viewport */
+}
+
+/* Container styles (apply only to the ShowDetails page. dont b a fool) */
+.show-details-container {
+  background-color: #111; /* dark gray ish background for the container */
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Shadow for the container */
+  padding: 20px;
+  text-align: center;
+  max-width: 600px;
+}
+
+/* Image styles (Apply only to the ShowDetails page) */
+.show-details-img {
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.3s; /* Add transition for image scaling */
+}
+
+/* Add a hover effect to scale the image by 1.5 times on hover */
+.show-details-img:hover {
+  transform: scale(1.5);
+}
+
+/* Heading styles */
+.show-details-h1 {
+  font-size: 28px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  transition: text-decoration 0.3s ease, font-weight 0.3s ease; /* Add transition for text decoration and font weight */
+}
+
+/* Subheading styles */
+.show-details-h4 {
+  font-size: 18px;
+  color: #bbb;
+  transition: text-decoration 0.3s ease, font-weight 0.3s ease; /* Add transition for text decoration and font weight */
+}
+
+/* Paragraph styles */
+.show-details-p {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #ccc;
+  transition: text-decoration 0.3s ease, font-weight 0.3s ease; /* Add transition for text decoration and font weight */
+}
+
+/* Add underline and make text bold on hover */
+.show-details-h1:hover,
+.show-details-h4:hover,
+.show-details-p:hover {
+  text-decoration: underline;
+  font-weight: bold;
+}

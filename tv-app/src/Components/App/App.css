@@ -72,3 +72,40 @@ nav {
   background-color: orangered;
   border-color: #282c34;
 }
+
+/* App.css */
+body {
+  background-color: #000; /* Dark background color for the entire page */
+  color: #fff; /* White text color */
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Add styles for the notification banner */
+.notification-banner {
+  position: fixed; /* Fixed position at the top of the viewport */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #FF0000; /* Red background color for the banner */
+  color: #fff; /* White text color */
+  padding: 10px;
+  text-align: center;
+  z-index: 999; /* Ensure the banner appears above other content */
+}
+
+.dismiss-button {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  text-decoration: underline;
+  margin-left: 10px;
+}
+
+.dismiss-button:hover {
+  text-decoration: none;
+}
+
+
