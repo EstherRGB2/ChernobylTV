@@ -14,8 +14,8 @@ function App() {
   return (
       <div>
    <Routes>
-   <Route path="/movie" element={<AllMovies />} />
-   <Route path="/movie/:movieId" element={<MovieDetails />} />
+    <Route path="/movie" element={<AllMovies />} />
+    <Route path="/movie/:movieId" element={<MovieDetails />} />
     <Route path="/" element={<MainPage />} />
     <Route path="/Components/Home" element={<Home />} />
     <Route path="/shows/:showId" element={<ShowDetails />} />
