@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import './search.css';
 
 function SearchResults({ navigate }) {
   const [searchQuery, setSearchQuery] = useState('');
@@ -39,13 +40,13 @@ function SearchResults({ navigate }) {
 
       {/* Display search results */}
       {searchResults.length > 0 && (
-        <div>
+        <div className = "search-results-container">
           <h2>Search Results:</h2>
-          <ul>
+          <ul className = "search-items-container">
           {searchResults.map((result) => (
-              <li key={result.show.id}>
+              <li className = "search-result-item" key={result.show.id}>
                 <Link to={`/shows/${result.show.id}`}>
-                  <img src={result.show.image && result.show.image.medium} alt={result.show.name} />
+                  <img className= "search-result-image" src={result.show.image && result.show.image.medium} alt={result.show.name} />
                   {result.show.name}
                 </Link>
               </li>
