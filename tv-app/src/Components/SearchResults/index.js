@@ -42,9 +42,12 @@ function SearchResults({ navigate }) {
         <div>
           <h2>Search Results:</h2>
           <ul>
-            {searchResults.map((result) => (
+          {searchResults.map((result) => (
               <li key={result.show.id}>
-                <Link to={`/shows/${result.show.id}`}>{result.show.name}</Link>
+                <Link to={`/shows/${result.show.id}`}>
+                  <img src={result.show.image && result.show.image.medium} alt={result.show.name} />
+                  {result.show.name}
+                </Link>
               </li>
             ))}
           </ul>
