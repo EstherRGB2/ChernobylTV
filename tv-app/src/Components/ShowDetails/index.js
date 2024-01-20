@@ -1,3 +1,5 @@
+//ShowDetails
+
 import React, { useEffect, useState } from 'react';
 import { useParams} from 'react-router-dom';
 import './deets.css'; // importing the css file here from ShowDetails folder
@@ -20,17 +22,25 @@ if (!show) {
 }
 return (
         <div>
-          <img src={show.image.medium} alt={show.name}/>
-          <h1>{show.name}</h1>
-          <h4>{`Premiered:${show.premiered}`}</h4>
-          <p>{show.genres}</p>
-          <p>{show.language}</p>
-
-
-           {/* Copyright footer was inserted here. TNT Kuttler Co*/}
-      <footer className="copyright">
-        &copy; {new Date().getFullYear()} TNT Kuttler Co. All Rights Reserved.
-      </footer>
+          <div className="show-details-container">
+            <div className="show-details-img-wrapper">
+              <img className="show-details-img" src={show.image.medium} alt={show.name}/>
+            </div>
+            <div className = "show-details-body">
+              <ul>
+                <li><h1 className = "show-details-h1">{show.name}</h1></li>
+                <li><h4 className = "show-details-h4">{`Premiered: ${show.premiered}`}</h4></li>
+                <li><p className = "show-details-p">{`Genres: ${show.genres}`}</p></li>
+                <li><p className = "show-details-p">{`Language: ${show.language}`}</p></li>
+                <li><p className = "show-details-p">{show.summary}</p></li>
+                <li><p className = "show-details-p">{`Rating: ${show.rating.average}`}</p></li>
+              </ul>
+            </div>
+          </div>
+              {/* Copyright footer was inserted here. TNT Kuttler Co*/}
+          <footer className="copyright">
+            &copy; {new Date().getFullYear()} TNT Kuttler Co. All Rights Reserved.
+          </footer>
 
         </div>
 )

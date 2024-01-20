@@ -1,14 +1,13 @@
-
 //AllShows
 
 import React, { useState, useEffect} from 'react'
 import { useNavigate } from 'react-router-dom'
-import NotificationBanner from '../NotificationBanner'; // im import the NotificationBanner component right on this line
+import NotificationBanner from '../NotificationBanner'; // import NotificationBanner component right on this line
+
 export default function AllShows() {
   const [show, setShow] = useState(null)
   const [shows, setShows] = useState([])
   const navigate = useNavigate()
-
 
 
   useEffect(() => {
@@ -34,7 +33,7 @@ export default function AllShows() {
           <div className="shows--card" key={show.id}>
             <img
               onClick={() => handleShowClick(show.id)}
-              src={`${show.image.original}`}
+              src={`${show.image.medium}`}
               alt={show.name}
               width="250px"
             />
