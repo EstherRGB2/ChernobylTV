@@ -9,13 +9,19 @@ nav {
   flex-direction: row; /* Change to row for horizontal layout */
   justify-content: space-between; /* Add space between GMDB and Search */
   align-items: center;
-  padding: 10px; /* Add padding for spacing */
+  padding: 0.75% 2%;
   font-size: 32px;
-  color: white;
+  color:rgb(255, 217, 0);
 }
 
 .HomeLink {
-  color: white;
+  color: rgb(255, 217, 0);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.movie-home-button {
+  color: rgb(255, 217, 0);
   font-weight: 600;
   text-decoration: none;
 }
@@ -23,14 +29,26 @@ nav {
 .shows--card {
   display: inline-block;
   margin: 10px;
-  width: 23%; /* Adjust the width to fit four items in a row */
+  width: 15%; /* Adjust the width to fit four items in a row */
   box-sizing: border-box;
 }
+
+.shows--card:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in;
+  cursor: pointer;
+}
+
 .movies--card {
   display: inline-block;
   margin: 10px;
-  width: 23%; /* Adjust the width to fit four items in a row */
+  width: 15%; /* Adjust the width to fit four items in a row */
   box-sizing: border-box;
+}
+
+.movies--card:hover {
+  transform: scale(1.1);
+  cursor: pointer;
 }
 
 .movie {
@@ -40,6 +58,8 @@ nav {
 
 .Search {
   display: flex;
+  flex-direction: row;
+  align-items: center;
   border-radius: 10px;
   padding: 10px;
   margin: 5px;
@@ -47,29 +67,31 @@ nav {
 }
 
 .Search input[type="text"] {
-  height: 2em;
+  height: 3em;
+  width: 20em;
+  border-radius: 10px;
+  padding: 10px;
 }
 
 .submit {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgb(212, 181, 0);
+  color: rgb(255, 217, 0);
   background-color: #282c34;
   border-radius: 10px;
   padding: 2px;
   margin: 5px;
-  height: 2em;
-  border-color: rgb(212, 181, 0);
+  height: 3em;
+  width: 10em;
+  border-color:rgb(255, 217, 0);
   text-align: center; /* Center the text */
-  width: 100px;
-  height: 30px;
   cursor: pointer;
 }
 
 .submit:hover {
   color: #282c34;
-  background-color: rgb(212, 181, 0);
+  background-color: rgb(255, 217, 0);
   border-color: #282c34;
 }
 
@@ -80,7 +102,6 @@ body {
   margin: 0;
   padding: 0;
 }
-
 
 /* Add styles for the notification banner */
 .notification-banner {
