@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams} from 'react-router-dom';
+import { useParams, Link} from 'react-router-dom';
 import Youtube from 'react-youtube'
 export default function MovieDetails() {
 const { movieId } = useParams();
@@ -27,11 +27,16 @@ if (!movie) {
 }
 return (
         <div>
+          <nav>
+            <Link to="/movie">Back To Movies</Link>
+          </nav>
           <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
           alt={movie.original_title}/>
+          <div className="movie-details-container">
           <h1>{movie.original_title}</h1>
           <h4>{movie.overview}</h4>
           <p>{movie.popularity}</p>
+          </div>
           {video.length > 0 ? <Youtube videoId={video[0]?.key} /> : <div>No videos available</div>}
         </div>
 )
