@@ -14,6 +14,18 @@ nav {
   color:rgb(255, 217, 0);
 }
 
+.header-container-movies {
+  box-sizing: border-box;
+  background-color: #282c34;
+  display: flex;
+  flex-direction: row; /* Change to row for horizontal layout */
+  justify-content: space-between; /* Add space between GMDB and Search */
+  align-items: center;
+  padding: 0 2%;
+  font-size: 2.3rem;
+  color:rgb(255, 217, 0);
+}
+
 .HomeLink {
   color: rgb(255, 217, 0);
   font-weight: 600;
@@ -77,9 +89,10 @@ nav {
 
 .Search input[type="text"] {
   height: 3em;
-  width: 20em;
+  width: 85vw;
   border-radius: 10px;
   padding: 10px;
+  background-color: #3d434e;
 }
 
 .submit {

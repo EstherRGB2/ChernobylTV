@@ -1,0 +1,126 @@
+/* deets.css */
+
+* {
+  box-sizing: border-box; /* makes sizing calculations include padding and margins to output expected results. */
+}
+
+.movie-details-container {
+  display: flex;
+  flex-direction: row;
+  background-color: #111; /* dark gray ish background for the container */
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Shadow for the container */
+  padding: 20px;
+  text-align: left;
+}
+.movie-details-body-and-video-container {
+  display: flex;
+  flex-direction: column;
+  height: 50%;
+}
+
+.video-container {
+  width: 100%; /* Adjust the width as needed */
+}
+
+/* Container styles (apply only to the ShowDetails page. dont b a fool) */
+
+.movie-text-container {
+  width: 100%; /* Adjust the width as needed */
+  background-color: #111;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  text-align: left;
+}
+
+.movie-details-img-wrapper {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+/* Image styles (Apply only to the ShowDetails page) */
+.movie-details-img {
+  box-sizing: border-box;
+  object-fit: contain;
+  transition: transform 0.3s;
+  border: 6px solid rgb(212, 181, 0);
+  max-height: 100%;
+  width: auto; /* Allow the image width to adjust automatically */
+}
+
+/* Add a hover effect to scale the image by 1.5 times on hover */
+.movie-details-img:hover {
+  transform: scale(1.05);
+}
+
+/* Heading styles */
+.movie-details-h1 {
+  font-size: 28px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  line-height: 0.1;
+  transition: text-decoration 0.3s ease, font-weight 0.3s ease; /* Add transition for text decoration and font weight */
+}
+
+/* Subheading styles */
+.movie-details-h4 {
+  font-size: 18px;
+  color: #bbb;
+  line-height: 1.5;
+  transition: text-decoration 0.3s ease, font-weight 0.3s ease; /* Add transition for text decoration and font weight */
+}
+
+/* Paragraph styles */
+.movie-details-p {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #ccc;
+  line-height: 0.25;
+  transition: text-decoration 0.3s ease, font-weight 0.1s ease; /* Add transition for text decoration and font weight */
+}
+
+.main-home-button {
+  color: rgb(255, 217, 0);
+  font-weight: 600;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.main-home-button:hover {
+  color: #282c34;
+  background-color: rgb(255, 217, 0);
+  border-color: #e6e35c 20px solid;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+/* Add underline and make text bold on hover */
+.show-details-h1:hover,
+.show-details-h4:hover,
+.show-details-p:hover {
+  color: rgb(212, 181, 0);
+  font-weight: bold;
+}
+
+.movie-date-and-runtime {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.genres-and-language {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.movie-popularity {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

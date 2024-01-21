@@ -13,10 +13,13 @@ function Home() {
         </Link>
         <Link to="/movie" className="movie-home-button">Go To Movies</Link>
       </nav>
+
       <div className="SearchResultsContainer">
           <SearchResults />
       </div>
+
       <AllShows />
+
     </>
   );
 }

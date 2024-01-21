@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link} from 'react-router-dom';
 import Youtube from 'react-youtube'
+import './MovieDetails.css'
 
 export default function MovieDetails() {
 const { movieId } = useParams();
@@ -29,18 +30,50 @@ if (!movie) {
   return <div>Loading...</div>
 }
 return (
-        <div>
-          <nav>
-            <Link to="/movie">Back To Movies</Link>
-          </nav>
-          <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
-          alt={movie.original_title}/>
-          <div className="movie-details-container">
-          <h1>{movie.original_title}</h1>
-          <h4>{movie.overview}</h4>
-          <p>{movie.popularity}</p>
+  <div>
+    <nav>
+      <Link className = "main-home-button" to="/movie">Back To Movies</Link>
+    </nav>
+    <div className = "movie-details-container">
+      <div className = "movie-details-img-wrapper">
+        <img
+          className = "movie-details-img"
+          src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
+          alt={movie.original_title}
+        />
+      </div>
+
+      <div className = "movie-details-body-and-video-container">
+        {video.length > 0 ? (
+          <div className = "video-container">
+            <Youtube videoId={video[0]?.key} />
           </div>
-          {video.length > 0 ? <Youtube videoId={video[0]?.key} /> : <div>No videos available</div>}
+        ) : (
+          <div>No videos available</div>
+        )}
+
+        <div className = "movie-text-container">
+          <h1 className = "movie-details-h1">{movie.original_title}</h1>
+          <h4 className = "movie-details-h4">{movie.overview}</h4>
+
+          <div className = "movie-date-and-runtime">
+            <p className = "movie-details-p">{`Release Date: ${movie.release_date}`}</p>
+            <p className = "movie-details-p">{`Runtime: ${movie.runtime} minutes`}</p>
+          </div>
+
+          <div className = "genres-and-language">
+            <p className = "movie-details-p">{`Genres: ${movie.genres.map((genre) => genre.name).join(', ')}`}</p>
+            <p className = "movie-details-p">{`Language: ${movie.original_language}`}</p>
+          </div>
+
+          <div className = "movie-popularity">
+            <p className = "movie-details-p">{`Rating: ${movie.vote_average}`}</p>
+            <p className = "movie-details-p">{`Vote Count: ${movie.vote_count}`}</p>
+          </div>
+
         </div>
-)
+      </div>
+    </div>
+  </div>
+);
 }

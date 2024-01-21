@@ -29,10 +29,10 @@ return (
             <div className = "show-details-body">
               <ul>
                 <li><h1 className = "show-details-h1">{show.name}</h1></li>
-                <li><h4 className = "show-details-h4">{`Premiered: ${show.premiered}`}</h4></li>
-                <li><p className = "show-details-p">{`Genres: ${show.genres}`}</p></li>
-                <li><p className = "show-details-p">{`Language: ${show.language}`}</p></li>
                 <li><p className = "show-details-p">{show.summary}</p></li>
+                <li><h4 className = "show-details-h4">{`Premiered: ${show.premiered}`}</h4></li>
+                <li><p className = "show-details-p">{`Genres: ${show.genres.join(', ')}`}</p></li>
+                <li><p className = "show-details-p">{`Language: ${show.language}`}</p></li>
                 <li><p className = "show-details-p">{`Rating: ${show.rating.average}`}</p></li>
               </ul>
             </div>
