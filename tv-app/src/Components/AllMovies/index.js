@@ -8,6 +8,7 @@ export default function AllMovies() {
   const [movie, setMovie] = useState(null)
   const [movies, setMovies] = useState([])
   const navigate = useNavigate()
+
   useEffect(() => {
     fetch(`https://api.themoviedb.org/3/discover/movie?api_key=d3c7620c1fb2f037ed1627728138494b`)
 .then(res => res.json())

@@ -27,16 +27,18 @@ export default function MoviesNavbar() {
   return (
       <>
       <form className="nav-bar" onSubmit={searchMovies}>
-        <nav className="header-container">
-      <h2 className="movie-nav-header">Chernobyl TV</h2>
-      <Link to="/">Go To Shows</Link>
-      </nav>
-      <div className="search-container">
-  <input className="searchbar" type="text" placeholder="Search" name="query"
-    value={query} onChange={(e) => setQuery(e.target.value)}/>
-  <button className="movie-search-button" type="submit">Search</button>
-</div>
+          <nav className="header-container">
+            <h2 className="HomeLink">Chernobyl TV</h2>
+            <Link className = "movie-home-button" to="/">Go To Shows</Link>
+          </nav>
+
+        <div className="search-wrapper-movie">
+          <input className="Search" type="text" placeholder="Search" name="query"
+            value={query} onChange={(e) => setQuery(e.target.value)}/>
+          <button className="submit" type="submit">Search</button>
+        </div>
       </form>
+
       <div>
       {movies.map(movies => (
         <div className="movies--card" key={movies.id}>

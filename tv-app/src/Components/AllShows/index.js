@@ -28,7 +28,7 @@ export default function AllShows() {
   return (
     <>
       <NotificationBanner /> {/* added this line so that the banner is actually rendered in the page */}
-      <div>
+      <div className="shows--card-container">
         {shows.map((show) => (
           <div className="shows--card" key={show.id}>
             <img
@@ -39,8 +39,8 @@ export default function AllShows() {
             />
           </div>
       ))}
-        </div>
-      </>
+      </div>
+    </>
   )
 }
 
