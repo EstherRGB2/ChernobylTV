@@ -1,7 +1,7 @@
 //ShowDetails
 
 import React, { useEffect, useState } from 'react';
-import { useParams} from 'react-router-dom';
+import { useParams, Link, NavLink} from 'react-router-dom';
 import './deets.css'; // importing the css file here from ShowDetails folder
 
 export default function ShowDetails() {
@@ -22,6 +22,19 @@ if (!show) {
 }
 return (
         <div>
+              <div className = "nav-bar">
+                <nav className = "top-nav-bar">
+                <Link className = "HomeLink-shows" to="/" >
+                        <h2 className="HomeLink">Chernobyl TV</h2>
+                  </Link>
+                  <div className="spacer">
+                        <NavLink className = "movie-home-button" to="/" activeClassName="active-link">Shows</NavLink>
+                        <NavLink className = "movie-home-button" to="/movie" activeClassName="active-link">Movies</NavLink>
+                  </div>
+
+                </nav>
+              </div>
+
           <div className="show-details-container">
             <div className="show-details-img-wrapper">
               <img className="show-details-img" src={show.image.medium} alt={show.name}/>

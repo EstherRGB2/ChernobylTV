@@ -1,6 +1,6 @@
 import React from 'react'
 import {useState} from 'react'
-import { useNavigate, Link } from 'react-router-dom'
+import { useNavigate, Link, NavLink } from 'react-router-dom'
 import './moviesNavbar.css'
 
 export default function MoviesNavbar() {
@@ -32,7 +32,10 @@ export default function MoviesNavbar() {
             <Link className = "HomeLink-shows" to="/">
               <h2 className="HomeLink">Chernobyl TV</h2>
             </Link>
-            <Link className = "movie-home-button" to="/">Go To Shows</Link>
+            <div className="spacer">
+              <NavLink className = "movie-home-button" to="/" activeClassName="active-link">Shows</NavLink>
+              <NavLink className = "movie-home-button" to="/movie" activeClassName="active-link">Movies</NavLink>
+            </div>
           </nav>
         <div className="search-wrapper-movie">
           <input className="Search" type="text" placeholder="Search" name="query"

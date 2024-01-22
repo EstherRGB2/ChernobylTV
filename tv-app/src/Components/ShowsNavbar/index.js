@@ -1,7 +1,7 @@
-// This file is commented out because it it's actions are duplicated in App.js
+//ShowsNavbar.js
 
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import ShowSearchResults from '../ShowSearchResults';
 
 function ShowsNavbar() {
@@ -14,7 +14,10 @@ function ShowsNavbar() {
           <Link className = "HomeLink-shows" to="/" >
             <h2 className="HomeLink">Chernobyl TV</h2>
           </Link>
-          <Link to="/movie" className="movie-home-button">Go To Movies</Link>
+          <div className="spacer">
+              <NavLink className = "movie-home-button" to="/" activeClassName="active-link">Shows</NavLink>
+              <NavLink className = "movie-home-button" to="/movie" activeClassName="active-link">Movies</NavLink>
+          </div>
         </div>
 
         <div>

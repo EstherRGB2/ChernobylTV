@@ -1,7 +1,7 @@
 //MovieDetails
 
 import React, { useEffect, useState } from 'react';
-import { useParams, Link} from 'react-router-dom';
+import { useParams, Link, NavLink} from 'react-router-dom';
 import Youtube from 'react-youtube'
 import './MovieDetails.css'
 
@@ -36,7 +36,10 @@ return (
       <Link className = "HomeLink-shows" to="/" >
               <h2 className="HomeLink">Chernobyl TV</h2>
         </Link>
-        <Link className = "movie-home-button" to="/movie">Back To Movies</Link>
+        <div className="spacer">
+              <NavLink className = "movie-home-button" to="/" activeClassName="active-link">Shows</NavLink>
+              <NavLink className = "movie-home-button" to="/movie" activeClassName="active-link">Movies</NavLink>
+        </div>
 
       </nav>
     </div>

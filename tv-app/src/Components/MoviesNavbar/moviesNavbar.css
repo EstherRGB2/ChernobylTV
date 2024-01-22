@@ -1,3 +1,7 @@
+.active-link {
+  color: rgb(255, 217, 0); /* Replace with the color of your hover effect */
+}
+
 .nav-bar {
   background: linear-gradient(to bottom, #6986c0, #000000);
   min-height: 5vh;
@@ -15,6 +19,12 @@
   justify-content: space-between; /* Add space between GMDB and Search */
   font-size: 2.3rem;
   color:rgb(255, 217, 0);
+}
+
+.spacer {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
 }
 
 .HomeLink {
