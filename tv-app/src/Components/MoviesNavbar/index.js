@@ -37,6 +37,7 @@ export default function MoviesNavbar() {
               <NavLink className = "movie-home-button" to="/movie">Movies</NavLink>
             </div>
           </nav>
+
         <div className="search-wrapper-movie">
           <input className="Search" type="text" placeholder="Search" name="query"
             value={query} onChange={(e) => setQuery(e.target.value)}/>
@@ -44,23 +45,32 @@ export default function MoviesNavbar() {
         </div>
       </form>
 
-      <div>
-      {movies.map(movies => (
-        <div className="movies--card" key={movies.id}>
-          <img onClick={() => handleMovieClick(movies.id)}
-          src={`https://image.tmdb.org/t/p/w500/${movies.poster_path}`}
-          alt={movies.title}
-          width="250px"
-          />
-          </div>
-      ))}
+
+      <div className = "search-results-container">
+        <h1 className = "seach-results-container-title">Search Results</h1>
+          <ul className = "search-items-container">
+            {movies.map(movies => (
+              <li className = "search-result-item" key={movies.id}>
+                  <div className="show-item">
+                    <img onClick={() => handleMovieClick(movies.id)}
+                    src={`https://image.tmdb.org/t/p/w500/${movies.poster_path}`}
+                    alt={movies.title}
+                    width="250px"
+                    className="search-result-image"
+                    />
+                </div>
+              </li>
+            ))}
+          </ul>
+
         </div>
-      {selectedMovie && ( // Render selected movie details if available
+          {selectedMovie && ( // Render selected movie details if available
         <div>
           <h3>{selectedMovie.title}</h3>
           <p>{selectedMovie.description}</p>
           {/* Display other details of the selected movie */}
         </div>
+
       )}
       </>
   )
