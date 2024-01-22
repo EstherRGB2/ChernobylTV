@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Home from '../Home';
+import ShowsNavbar from '../ShowsNavbar';
 import ShowDetails from '../ShowDetails';
 import ShowSearchResults from '../ShowSearchResults';
 import './App.css';
@@ -19,7 +19,7 @@ function App() {
     <Route path="/movie" element={<MoviesMainPage />} />
     <Route path="/movie/:movieId" element={<MovieDetails />} />
     <Route path="/" element={<MainPage />} />
-    <Route path="/Components/Home" element={<Home />} />
+    <Route path="/Components/Home" element={<ShowsNavbar />} />
     <Route path="/shows/:showId" element={<ShowDetails />} />
     <Route path="/search" element={<ShowSearchResults />} />
   </Routes>
@@ -30,8 +30,8 @@ function App() {
 function MainPage() {
   return (
     <div>
-      <Home />
       <NotificationBanner />
+      <ShowsNavbar />
       <AllShows />
     </div>
   );

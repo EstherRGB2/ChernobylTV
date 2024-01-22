@@ -2,6 +2,13 @@
   text-align: center;
 }
 
+.top-nav-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
 nav {
   background-color: #282c34;
   min-height: 5vh;
@@ -18,7 +25,7 @@ nav {
   background-color: #282c34;
   display: flex;
   flex-direction: row; /* Change to row for horizontal layout */
-  justify-content: space-between; /* Add space between GMDB and Search */
+  justify-content: space-between;
   align-items: center;
   padding: 0 2%;
   font-size: 2.3rem;
@@ -49,7 +56,7 @@ nav {
 .shows--card {
   display: inline-block;
   margin: 10px;
-  width: 15%; /* Adjust the width to fit four items in a row */
+  width: 15%;
   box-sizing: border-box;
 
 }
@@ -62,7 +69,7 @@ nav {
 .movies--card {
   display: inline-block;
   margin: 10px;
-  width: 15%; /* Adjust the width to fit four items in a row */
+  width: 15%;
   box-sizing: border-box;
 }
 
