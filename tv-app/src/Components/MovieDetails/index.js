@@ -31,9 +31,16 @@ if (!movie) {
 }
 return (
   <div>
-    <nav>
-      <Link className = "main-home-button" to="/movie">Back To Movies</Link>
-    </nav>
+    <div className = "nav-bar">
+      <nav className = "top-nav-bar">
+      <Link className = "HomeLink-shows" to="/" >
+              <h2 className="HomeLink">Chernobyl TV</h2>
+        </Link>
+        <Link className = "movie-home-button" to="/movie">Back To Movies</Link>
+
+      </nav>
+    </div>
+
     <div className = "movie-details-container">
       <div className = "movie-details-img-wrapper">
         <img
@@ -77,3 +84,4 @@ return (
   </div>
 );
 }
+

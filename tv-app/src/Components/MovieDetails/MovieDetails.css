@@ -4,43 +4,54 @@
   box-sizing: border-box; /* makes sizing calculations include padding and margins to output expected results. */
 }
 
-.movie-details-container {
-  display: flex;
-  flex-direction: row;
-  background-color: #111; /* dark gray ish background for the container */
-  border-radius: 5px; /* Rounded corners */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Shadow for the container */
-  padding: 20px;
-  text-align: left;
-}
 .movie-details-body-and-video-container {
   display: flex;
   flex-direction: column;
-  height: 50%;
+  justify-content: center;
+  width: 100%;
+
 }
+
+.movie-details-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-right: 40px;
+  margin-bottom: 40px;
+  margin-left: 40px;
+  gap: 30px;
+  background-color: black; /* dark gray ish background for the container */
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Shadow for the container */
+}
+
 
 .video-container {
   width: 100%; /* Adjust the width as needed */
+  margin-left: 20px;
 }
 
 /* Container styles (apply only to the ShowDetails page. dont b a fool) */
 
 .movie-text-container {
-  width: 100%; /* Adjust the width as needed */
+  width: 84%; /* Adjust the width as needed */
   background-color: #111;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   padding: 20px;
   text-align: left;
+  margin-left: 20px;
+  margin-top: 10px;
 }
 
 .movie-details-img-wrapper {
-  height: 100vh;
-  width: 100%;
+
   display: flex;
   justify-content: center;
   align-items: center;
-
+  margin-left: 40px;
 }
 
 /* Image styles (Apply only to the ShowDetails page) */
