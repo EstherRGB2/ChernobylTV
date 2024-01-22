@@ -1,5 +1,9 @@
-.active-link {
-  color: rgb(255, 217, 0); /* Replace with the color of your hover effect */
+.top-nav-bar a.active{
+  color: #282c34;
+  background-color: rgb(255, 217, 0);
+  border-color: #e6e35c 20px solid;
+  border-radius: 4px;
+  padding: 10px;
 }
 
 .nav-bar {

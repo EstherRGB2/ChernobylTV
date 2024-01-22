@@ -15,8 +15,8 @@ function ShowsNavbar() {
             <h2 className="HomeLink">Chernobyl TV</h2>
           </Link>
           <div className="spacer">
-              <NavLink className = "movie-home-button" to="/" activeClassName="active-link">Shows</NavLink>
-              <NavLink className = "movie-home-button" to="/movie" activeClassName="active-link">Movies</NavLink>
+              <NavLink className = "movie-home-button" to="/" >Shows</NavLink>
+              <NavLink className = "movie-home-button" to="/movie" >Movies</NavLink>
           </div>
         </div>
 
