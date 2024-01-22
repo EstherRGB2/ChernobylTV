@@ -3,11 +3,12 @@
   min-height: 5vh;
   display: flex;
   flex-direction: column; /* Change to row for horizontal layout */
+  justify-content: space-between; /* Add space between GMDB and Search */
   padding: 0.75% 2%;
   color:rgb(255, 217, 0);
 }
 
-.top-nav-bar {
+.header-container-movies {
   box-sizing: border-box;
   background-color: rgb(0,0,0,0);
   display: flex;

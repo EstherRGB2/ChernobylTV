@@ -141,11 +141,11 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #FF0000; /* Red background color for the banner */
-  color: #fff; /* White text color */
+  background-color: rgb(255, 217, 0); /* Red background color for the banner */
+  color: black; /* White text color */
   padding: 10px;
   text-align: center;
-  z-index: 999; /* Ensure the banner appears above other content */
+  z-index: 1001; /* Ensure the banner appears above other content */
 }
 
 .dismiss-button {

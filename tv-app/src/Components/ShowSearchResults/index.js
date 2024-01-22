@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './search.css';
 
-function SearchResults({ navigate }) {
+function ShowSearchResults({ navigate }) {
   const [searchQuery, setSearchQuery] = useState('');
   const [searchResults, setSearchResults] = useState([]);
 
@@ -60,4 +60,4 @@ function SearchResults({ navigate }) {
   );
 }
 
-export default SearchResults;
+export default ShowSearchResults;
