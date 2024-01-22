@@ -8,10 +8,6 @@
   justify-content: space-between;
 }
 
-/* a:-webkit-any-link {
-  text-decoration: none;
-} */
-
 nav {
   background-color: #282c34;
   min-height: 5vh;
