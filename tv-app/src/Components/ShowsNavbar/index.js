@@ -8,18 +8,17 @@ function ShowsNavbar() {
 
   return (
     <>
-      {/* <ShowsNavbar /> */}
-      <nav className = "nav-bar">
+      <form className = "nav-bar">
         <div className = "top-nav-bar">
-          <Link to="/" className="HomeLink">
-            Chernobyl TV
+          <Link className = "HomeLink-shows" to="/" >
+            <h2 className="HomeLink">Chernobyl TV</h2>
           </Link>
           <Link to="/movie" className="movie-home-button">Go To Movies</Link>
         </div>
-        <div className="SearchResultsContainer">
+        <div>
           <ShowSearchResults />
       </div>
-      </nav>
+      </form>
     </>
   );
 }

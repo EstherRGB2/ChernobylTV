@@ -29,7 +29,9 @@ export default function MoviesNavbar() {
       <>
       <form className="nav-bar" onSubmit={searchMovies}>
           <nav className="top-nav-bar">
-            <h2 className="HomeLink">Chernobyl TV</h2>
+            <Link className = "HomeLink-shows" to="/">
+              <h2 className="HomeLink">Chernobyl TV</h2>
+            </Link>
             <Link className = "movie-home-button" to="/">Go To Shows</Link>
           </nav>
         <div className="search-wrapper-movie">

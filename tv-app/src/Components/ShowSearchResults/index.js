@@ -26,11 +26,12 @@ function ShowSearchResults({ navigate }) {
   };
 
   return (
-    <div>
-      <form className="Search" onSubmit={handleSearch}>
+    <div >
+      <form className = "search-wrapper-shows" onSubmit={handleSearch}>
         <input
           type="text"
           name="q"
+          className="Search"
           placeholder="Search..."
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}

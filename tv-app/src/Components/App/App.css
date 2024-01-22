@@ -8,6 +8,9 @@
   justify-content: space-between;
 }
 
+/* a:-webkit-any-link {
+  text-decoration: none;
+} */
 
 nav {
   background-color: #282c34;
@@ -35,6 +38,10 @@ nav {
 .HomeLink {
   color: rgb(255, 217, 0);
   font-weight: 600;
+  text-decoration: none;
+}
+
+.HomeLink-shows {
   text-decoration: none;
 }
 
@@ -83,7 +90,7 @@ nav {
   margin: 2px 2px;
 }
 
-.Search {
+/* .Search {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -91,7 +98,7 @@ nav {
   padding: 10px;
   margin: 5px;
   font-size: 16px;
-}
+} */
 
 .Search input[type="text"] {
   height: 3em;
