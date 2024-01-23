@@ -1,7 +1,7 @@
 //MovieDetails
 
 import React, { useEffect, useState } from 'react';
-import { useParams, Link} from 'react-router-dom';
+import { useParams, Link, NavLink} from 'react-router-dom';
 import Youtube from 'react-youtube'
 import './MovieDetails.css'
 import LoginButton from '../LoginButton'
@@ -31,14 +31,29 @@ if (!movie) {
 }
 return (
   <div>
-    <nav>
-      <Link className = "main-home-button" to="/movie">Back To Movies</Link>
-    </nav>
+    <div className = "nav-bar">
+      <nav className = "top-nav-bar">
+      <Link className = "HomeLink-shows" to="/" >
+              <h2 className="HomeLink">Chernobyl</h2>
+              <img src= {process.env.PUBLIC_URL + '/ChernobylTV_Logo.png'}
+                   alt="Chernobyl TV Logo"
+                   className="logo-image"/>
+        </Link>
+      <div className="spacer">
+        <NavLink className = "movie-home-button" to="/" >Shows</NavLink>
+        <NavLink className = "movie-home-button" to="/movie" >Movies</NavLink>
+      </div>
+
+      </nav>
+    </div>
+
     <div className = "movie-details-container">
       <div className = "movie-details-img-wrapper">
         <img
           className = "movie-details-img"
-          src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
+          src={movie.poster_path ?
+            `https://image.tmdb.org/t/p/w500/${movie.poster_path}` :
+            `${process.env.PUBLIC_URL}/NoImage.png`}
           alt={movie.original_title}
         />
       </div>
@@ -78,3 +93,4 @@ return (
   </div>
 );
 }
+

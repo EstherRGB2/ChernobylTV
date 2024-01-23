@@ -33,10 +33,11 @@ export default function AllShows() {
           <div className="shows--card" key={show.id}>
             <img
               onClick={() => handleShowClick(show.id)}
-              src={`${show.image.medium}`}
+              src={show.image && show.image.medium ? show.image.medium : `${process.env.PUBLIC_URL}/NoImage.png`}
               alt={show.name}
               width="250px"
             />
+            {console.log(`${process.env.PUBLIC_URL + '/NoImage.png'}`)}
           </div>
       ))}
       </div>

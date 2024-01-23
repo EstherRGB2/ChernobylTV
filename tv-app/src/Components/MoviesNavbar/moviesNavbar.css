@@ -1,3 +1,4 @@
+
 .nav-bar {
   background: linear-gradient(to bottom, #6986c0, #000000);
   min-height: 5vh;
@@ -15,6 +16,12 @@
   justify-content: space-between; /* Add space between GMDB and Search */
   font-size: 2.3rem;
   color:rgb(255, 217, 0);
+}
+
+.spacer {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
 }
 
 .HomeLink {
@@ -82,7 +89,50 @@
   border-color: #282c34;
 }
 
+.seach-results-title {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  margin: 20px 0;
+  background-color: rgb(255, 217, 0);
+}
 
+.search-items-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  list-style-type: none;
+  background-color: #111
+}
+
+.close-search-results {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(255, 217, 0);
+  background-color: #282c34;
+  border-radius: 10px;
+  padding: 2px;
+  margin: 5px;
+  height: 3em;
+  width: 10em;
+  border-color:rgb(255, 217, 0);
+  text-align: center; /* Center the text */
+  cursor: pointer;
+}
+
+.close-search-results:hover {
+  color: #282c34;
+  background-color: rgb(255, 217, 0);
+  border-color: #282c34;
+}
 
 
 

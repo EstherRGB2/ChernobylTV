@@ -15,13 +15,15 @@ import NotificationBanner from '../NotificationBanner';
 function App() {
   return (
       <div>
-   <Routes>
+    
+    <Routes>
     <Route path="/movie" element={<MoviesMainPage />} />
     <Route path="/movie/:movieId" element={<MovieDetails />} />
     <Route path="/" element={<MainPage />} />
     <Route path="/Components/Home" element={<ShowsNavbar />} />
     <Route path="/shows/:showId" element={<ShowDetails />} />
     <Route path="/search" element={<ShowSearchResults />} />
+    <Route path="/shows" element={<AllShows />} />
   </Routes>
       </div>
   );
