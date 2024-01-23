@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect} from 'react'
 import { useNavigate } from 'react-router-dom'
-
+import AddFavorite from '../AddFavorite'
 const api_key = "d3c7620c1fb2f037ed1627728138494b"
 export default function AllMovies() {
   const [movie, setMovie] = useState(null)
@@ -31,7 +31,7 @@ export default function AllMovies() {
           src={`https://image.tmdb.org/t/p/w500/${movies.poster_path}`}
           alt={movies.title}
           width="250px"
-          />
+          favoriteComponent={AddFavorite}/>
           </div>
       ))}
         </div>
