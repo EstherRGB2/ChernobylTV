@@ -31,7 +31,7 @@ export default function AllMovies() {
           src={`https://image.tmdb.org/t/p/w500/${movies.poster_path}`}
           alt={movies.title}
           width="250px"
-          favoriteComponent={AddFavorite}/>
+        />
           </div>
       ))}
         </div>
