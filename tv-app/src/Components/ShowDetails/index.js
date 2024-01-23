@@ -33,6 +33,7 @@ return (
                   <div className="spacer">
                         <NavLink className = "movie-home-button" to="/">Shows</NavLink>
                         <NavLink className = "movie-home-button" to="/movie">Movies</NavLink>
+                        <LoginButton />
                   </div>
 
                 </nav>
@@ -56,7 +57,6 @@ return (
               </ul>
             </div>
           </div>
-          <LoginButton/>
               {/* Copyright footer was inserted here. TNT Kuttler Co*/}
           <footer className="copyright">
             &copy; {new Date().getFullYear()} TNT Kuttler Co. All Rights Reserved.

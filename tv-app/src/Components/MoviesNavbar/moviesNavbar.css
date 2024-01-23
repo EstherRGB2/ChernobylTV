@@ -22,6 +22,7 @@
   display: flex;
   flex-direction: row;
   gap: 1em;
+  align-items: center;
 }
 
 .HomeLink {
@@ -37,6 +38,25 @@
   color: rgb(255, 217, 0);
   font-weight: 600;
   text-decoration: none;
+  padding: 10px;
+}
+
+.login-button {
+  color:   rgb(255, 217, 0);
+  background-color: #30508f;
+  border-radius: 4px;
+  width: 4em;
+  height: 2em;
+  padding: 10px;
+  font-weight: 600;
+  font-size: 2.3rem;
+}
+
+.login-button:hover {
+  color: #282c34;
+  background-color: rgb(255, 217, 0);
+  border-color: #e6e35c 20px solid;
+  border-radius: 4px;
   padding: 10px;
 }
 

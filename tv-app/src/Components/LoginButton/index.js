@@ -6,8 +6,8 @@ export default function LoginButton() {
   const { loginWithRedirect } = useAuth0()
 
   return (
-    <button onClick={() => loginWithRedirect()}>
-      Log In To Add Items To Watchlist
+    <button className = "login-button" onClick={() => loginWithRedirect()}>
+      Log In
     </button>
   )
 
