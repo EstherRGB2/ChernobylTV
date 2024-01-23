@@ -28,8 +28,8 @@ To view the project, open VS Code and run the commands below from the VS Code te
 
 👤 **Esther Kuttler, Tyrelle Robinson, and Tevan Millette**
 
-* Github: [@EstherRGB2](https://github.com/EstherRGB2)
-          [@RobBuilds](https://github.com/RobBuilds)
+* Github: [@EstherRGB2] (https://github.com/EstherRGB2)
+          [@RobBuilds] (https://github.com/RobBuilds)
           [@Tevan001] (https://github.com/Tevan001)
 
 ## Show your support

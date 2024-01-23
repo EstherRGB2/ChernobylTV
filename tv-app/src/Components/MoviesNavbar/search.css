@@ -20,7 +20,12 @@
   background-color: #3d434e;
 }
 
-.seach-results-container-title {
+.search-results-container-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1px 20px;
   width: 100%;
   text-align: center;
   font-size: 1.5rem;
@@ -41,14 +46,6 @@
     background-color: #111
 }
 
-.search-result-title {
-  width: 70%;
-  text-align: left;
-  font-size: 1rem;
-  font-weight: 450;
-  color: white;
-  margin: 1px;
-}
 
 .show-item {
   display: inline-block;

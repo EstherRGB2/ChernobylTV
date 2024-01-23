@@ -51,7 +51,7 @@ export default function MoviesNavbar() {
 
         {movies.length > 0 && (
           <div className="search-results-container">
-            <h1 className="search-results-title" id = "search-results-title">Search Results
+            <h1 className="search-results-title" >Search Results
             <button onClick={() => setMovies([])} className="close-search-results">X</button>
             </h1>
             <ul className="search-items-container">
