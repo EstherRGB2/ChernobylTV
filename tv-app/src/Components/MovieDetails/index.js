@@ -90,6 +90,10 @@ return (
         </div>
       </div>
     </div>
+              {/* Copyright footer was inserted here. TNT Kuttler Co*/}
+          <footer className="copyright">
+            &copy; {new Date().getFullYear()} TNT Kuttler Co. All Rights Reserved.
+          </footer>
   </div>
 );
 }

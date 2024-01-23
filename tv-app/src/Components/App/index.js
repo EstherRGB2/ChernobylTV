@@ -15,7 +15,7 @@ import NotificationBanner from '../NotificationBanner';
 function App() {
   return (
       <div>
-    
+
     <Routes>
     <Route path="/movie" element={<MoviesMainPage />} />
     <Route path="/movie/:movieId" element={<MovieDetails />} />
@@ -35,6 +35,10 @@ function MainPage() {
       <NotificationBanner />
       <ShowsNavbar />
       <AllShows />
+      {/* Copyright footer was inserted here. TNT Kuttler Co*/}
+      <footer className="copyright">
+        &copy; {new Date().getFullYear()} TNT Kuttler Co. All Rights Reserved.
+      </footer>
     </div>
   );
 }
@@ -44,6 +48,10 @@ function MoviesMainPage() {
     <div>
       <MoviesNavbar />
       <AllMovies />
+      {/* Copyright footer was inserted here. TNT Kuttler Co*/}
+      <footer className="copyright">
+        &copy; {new Date().getFullYear()} TNT Kuttler Co. All Rights Reserved.
+      </footer>
     </div>
   );
 }
