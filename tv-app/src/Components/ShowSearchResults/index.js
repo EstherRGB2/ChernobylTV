@@ -42,7 +42,7 @@ function ShowSearchResults({ navigate }) {
       {/* Display search results */}
       {searchResults.length > 0 && (
         <div className = "search-results-container">
-          <h1 className = "seach-results-container-title">Search Results
+          <h1 className = "search-results-title">Search Results
           <button onClick={() => setSearchResults([])} className="close-search-results">X</button>
           </h1>
           <ul className = "search-items-container">
