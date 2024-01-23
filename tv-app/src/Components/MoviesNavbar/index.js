@@ -2,6 +2,7 @@ import React from 'react'
 import {useState} from 'react'
 import { useNavigate, Link, NavLink } from 'react-router-dom'
 import './moviesNavbar.css'
+import LoginButton from '../LoginButton'
 // import './search.css';
 
 export default function MoviesNavbar() {
@@ -39,6 +40,7 @@ export default function MoviesNavbar() {
             <div className="spacer">
               <NavLink className = "movie-home-button" to="/">Shows</NavLink>
               <NavLink className = "movie-home-button" to="/movie">Movies</NavLink>
+              <LoginButton />
             </div>
           </nav>
 

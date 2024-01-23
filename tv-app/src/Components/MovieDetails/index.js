@@ -42,6 +42,7 @@ return (
       <div className="spacer">
         <NavLink className = "movie-home-button" to="/" >Shows</NavLink>
         <NavLink className = "movie-home-button" to="/movie" >Movies</NavLink>
+        <LoginButton />
       </div>
 
       </nav>
@@ -84,9 +85,7 @@ return (
           <div className = "movie-popularity">
             <p className = "movie-details-p">{`Rating: ${movie.vote_average}`}</p>
             <p className = "movie-details-p">{`Vote Count: ${movie.vote_count}`}</p>
-            <LoginButton/>
           </div>
-
         </div>
       </div>
     </div>

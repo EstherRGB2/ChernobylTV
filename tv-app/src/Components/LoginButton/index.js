@@ -4,7 +4,7 @@ import { useAuth0 } from '@auth0/auth0-react'
 export default function LoginButton() {
 
   return (
-    <button >
+    <button onClick={() => loginWithRedirect()}>
       Log In To Add Items To Watchlist
     </button>
   )
