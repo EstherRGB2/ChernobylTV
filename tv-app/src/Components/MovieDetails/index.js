@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams, Link, NavLink} from 'react-router-dom';
 import Youtube from 'react-youtube'
 import './MovieDetails.css'
-
+import LoginButton from '../LoginButton'
 export default function MovieDetails() {
 const { movieId } = useParams();
 const [ movie, setMovie ] = useState(null)
@@ -84,6 +84,7 @@ return (
           <div className = "movie-popularity">
             <p className = "movie-details-p">{`Rating: ${movie.vote_average}`}</p>
             <p className = "movie-details-p">{`Vote Count: ${movie.vote_count}`}</p>
+            <LoginButton/>
           </div>
 
         </div>
