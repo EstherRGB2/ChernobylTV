@@ -15,7 +15,8 @@ import NotificationBanner from '../NotificationBanner';
 function App() {
   return (
       <div>
-   <Routes>
+    
+    <Routes>
     <Route path="/movie" element={<MoviesMainPage />} />
     <Route path="/movie/:movieId" element={<MovieDetails />} />
     <Route path="/" element={<MainPage />} />
