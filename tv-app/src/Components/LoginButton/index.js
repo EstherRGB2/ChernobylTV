@@ -7,7 +7,7 @@ export default function LoginButton() {
 
   return (
     <button onClick={() => loginWithRedirect()}>
-      Log In
+      Log In To Add Items To Watchlist
     </button>
   )
 

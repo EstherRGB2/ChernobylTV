@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link, NavLink} from 'react-router-dom';
 import './deets.css'; // importing the css file here from ShowDetails folder
-
+import LoginButton from '../LoginButton'
 export default function ShowDetails() {
 const { showId } = useParams();
 const [ show, setShow ] = useState(null)
@@ -56,6 +56,7 @@ return (
               </ul>
             </div>
           </div>
+          <LoginButton/>
               {/* Copyright footer was inserted here. TNT Kuttler Co*/}
           <footer className="copyright">
             &copy; {new Date().getFullYear()} TNT Kuttler Co. All Rights Reserved.
