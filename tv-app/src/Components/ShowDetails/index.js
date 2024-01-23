@@ -40,7 +40,10 @@ return (
 
           <div className="show-details-container">
             <div className="show-details-img-wrapper">
-              <img className="show-details-img" src={show.image.medium} alt={show.name}/>
+              <img className="show-details-img"
+                    src={show.image && show.image.medium ?
+                    show.image.medium :
+                    `${process.env.PUBLIC_URL}/NoImage.png`} alt={show.name} />
             </div>
             <div className = "show-details-body">
               <ul>

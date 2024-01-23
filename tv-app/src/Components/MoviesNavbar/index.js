@@ -2,7 +2,7 @@ import React from 'react'
 import {useState} from 'react'
 import { useNavigate, Link, NavLink } from 'react-router-dom'
 import './moviesNavbar.css'
-
+// import './search.css';
 
 export default function MoviesNavbar() {
   const [query, setQuery] = useState('')
@@ -49,25 +49,31 @@ export default function MoviesNavbar() {
         </div>
       </form>
 
-
-      <div className = "search-results-container">
-        <h1 className = "seach-results-container-title">Search Results</h1>
-          <ul className = "search-items-container">
-            {movies.map(movies => (
-              <li className = "search-result-item" key={movies.id}>
+        {movies.length > 0 && (
+          <div className="search-results-container">
+            <h1 className="search-results-title" id = "search-results-title">Search Results
+            <button onClick={() => setMovies([])} className="close-search-results">X</button>
+            </h1>
+            <ul className="search-items-container">
+              {movies.map(movies => (
+                <li className="search-result-item" key={movies.id}>
                   <div className="show-item">
                     <img onClick={() => handleMovieClick(movies.id)}
-                    src={`https://image.tmdb.org/t/p/w500/${movies.poster_path}`}
-                    alt={movies.title}
-                    width="250px"
-                    className="search-result-image"
+                      src={movies.poster_path ?
+                        `https://image.tmdb.org/t/p/w500/${movies.poster_path}` :
+                        `${process.env.PUBLIC_URL}/NoImage.png`}
+                      alt={movies.title}
+                      width="250px"
+                      className="search-result-image"
                     />
-                </div>
-              </li>
-            ))}
-          </ul>
+                    <p className="search-result-title">{movies.title}</p>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
 
-        </div>
           {selectedMovie && ( // Render selected movie details if available
         <div>
           <h3>{selectedMovie.title}</h3>

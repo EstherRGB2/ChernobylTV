@@ -21,11 +21,6 @@
 }
 
 .seach-results-container-title {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1px 20px;
   width: 100%;
   text-align: center;
   font-size: 1.5rem;

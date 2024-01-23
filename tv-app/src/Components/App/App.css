@@ -8,6 +8,14 @@
   justify-content: space-between;
 }
 
+.top-nav-bar a.active{
+  color: #282c34;
+  background-color: rgb(255, 217, 0);
+  border-color: #e6e35c 20px solid;
+  border-radius: 4px;
+  padding: 10px;
+}
+
 nav {
   background-color: #282c34;
   min-height: 5vh;
@@ -197,3 +205,22 @@ body {
 
 }
 
+.seach-results-title {
+  width: 100%;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  margin: 20px 0;
+  background-color: rgb(255, 217, 0);
+}
+
+.seach-results-title h1{
+  width: 100%;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  margin: 20px 0;
+  background-color: rgb(255, 217, 0);
+}

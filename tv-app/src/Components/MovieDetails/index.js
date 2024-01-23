@@ -51,7 +51,9 @@ return (
       <div className = "movie-details-img-wrapper">
         <img
           className = "movie-details-img"
-          src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
+          src={movie.poster_path ?
+            `https://image.tmdb.org/t/p/w500/${movie.poster_path}` :
+            `${process.env.PUBLIC_URL}/NoImage.png`}
           alt={movie.original_title}
         />
       </div>

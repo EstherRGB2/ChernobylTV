@@ -42,13 +42,18 @@ function ShowSearchResults({ navigate }) {
       {/* Display search results */}
       {searchResults.length > 0 && (
         <div className = "search-results-container">
-          <h1 className = "seach-results-container-title">Search Results</h1>
+          <h1 className = "seach-results-container-title">Search Results
+          <button onClick={() => setSearchResults([])} className="close-search-results">X</button>
+          </h1>
           <ul className = "search-items-container">
           {searchResults.map((result) => (
               <li className = "search-result-item" key={result.show.id}>
                 <Link to={`/shows/${result.show.id}`}>
                   <div className="show-item">
-                  <img className="search-result-image" src={result.show.image && result.show.image.medium ? result.show.image.medium : `${process.env.PUBLIC_URL}/NoImage.png`} alt={result.show.name} />
+                  <img className="search-result-image"
+                    src={result.show.image && result.show.image.medium ?
+                    result.show.image.medium :
+                    `${process.env.PUBLIC_URL}/NoImage.png`} alt={result.show.name} />
                     <p className = "search-result-title">{result.show.name}</p>
                   </div>
                 </Link>

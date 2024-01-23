@@ -60,7 +60,7 @@
   object-fit: contain;
   transition: transform 0.3s;
   border: 6px solid rgb(212, 181, 0);
-  max-height: 100%;
+  max-height: 100vh;
   width: auto; /* Allow the image width to adjust automatically */
 }
 
