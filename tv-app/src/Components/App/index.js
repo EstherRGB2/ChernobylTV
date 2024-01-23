@@ -22,6 +22,7 @@ function App() {
     <Route path="/Components/Home" element={<ShowsNavbar />} />
     <Route path="/shows/:showId" element={<ShowDetails />} />
     <Route path="/search" element={<ShowSearchResults />} />
+    <Route path="/shows" element={<AllShows />} />
   </Routes>
       </div>
   );

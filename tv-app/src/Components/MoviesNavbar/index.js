@@ -3,6 +3,7 @@ import {useState} from 'react'
 import { useNavigate, Link, NavLink } from 'react-router-dom'
 import './moviesNavbar.css'
 
+
 export default function MoviesNavbar() {
   const [query, setQuery] = useState('')
   const [movies, setMovies] = useState([])
@@ -30,7 +31,10 @@ export default function MoviesNavbar() {
       <form className="nav-bar" onSubmit={searchMovies}>
           <nav className="top-nav-bar">
             <Link className = "HomeLink-shows" to="/">
-              <h2 className="HomeLink">Chernobyl TV</h2>
+              <h2 className="HomeLink">Chernobyl</h2>
+              <img src= {process.env.PUBLIC_URL + '/ChernobylTV_Logo.png'}
+                   alt="Chernobyl TV Logo"
+                   className="logo-image"/>
             </Link>
             <div className="spacer">
               <NavLink className = "movie-home-button" to="/">Shows</NavLink>

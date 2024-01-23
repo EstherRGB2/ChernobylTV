@@ -12,7 +12,10 @@ function ShowsNavbar() {
 
         <div className = "top-nav-bar">
           <Link className = "HomeLink-shows" to="/" >
-            <h2 className="HomeLink">Chernobyl TV</h2>
+            <h2 className="HomeLink">Chernobyl</h2>
+            <img src= {process.env.PUBLIC_URL + '/ChernobylTV_Logo.png'}
+                   alt="Chernobyl TV Logo"
+                   className="logo-image"/>
           </Link>
           <div className="spacer">
               <NavLink className = "movie-home-button" to="/" >Shows</NavLink>

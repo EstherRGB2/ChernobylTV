@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './search.css';
 
 function ShowSearchResults({ navigate }) {
@@ -48,7 +48,7 @@ function ShowSearchResults({ navigate }) {
               <li className = "search-result-item" key={result.show.id}>
                 <Link to={`/shows/${result.show.id}`}>
                   <div className="show-item">
-                    {result.show.image && <img className="search-result-image" src={result.show.image.medium} alt={result.show.name} />}
+                  <img className="search-result-image" src={result.show.image && result.show.image.medium ? result.show.image.medium : `${process.env.PUBLIC_URL}/NoImage.png`} alt={result.show.name} />
                     <p className = "search-result-title">{result.show.name}</p>
                   </div>
                 </Link>
