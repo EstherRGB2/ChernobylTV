@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link, NavLink} from 'react-router-dom';
 import './deets.css'; // importing the css file here from ShowDetails folder
-import LoginButton from '../LoginButton'
+// import LoginButton from '../LoginButton'
 export default function ShowDetails() {
 const { showId } = useParams();
 const [ show, setShow ] = useState(null)
@@ -33,7 +33,7 @@ return (
                   <div className="spacer">
                         <NavLink className = "movie-home-button" to="/">Shows</NavLink>
                         <NavLink className = "movie-home-button" to="/movie">Movies</NavLink>
-                        <LoginButton />
+                        {/* <LoginButton /> */}
                   </div>
 
                 </nav>

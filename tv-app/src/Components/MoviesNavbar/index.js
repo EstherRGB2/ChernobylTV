@@ -1,7 +1,9 @@
 import React from 'react'
 import {useState} from 'react'
-import { useNavigate, Link } from 'react-router-dom'
+import { useNavigate, Link, NavLink } from 'react-router-dom'
 import './moviesNavbar.css'
+// import LoginButton from '../LoginButton'
+// import './search.css';
 
 export default function MoviesNavbar() {
   const [query, setQuery] = useState('')
@@ -29,9 +31,19 @@ export default function MoviesNavbar() {
       <>
       <form className="nav-bar" onSubmit={searchMovies}>
           <nav className="top-nav-bar">
-            <h2 className="HomeLink">Chernobyl TV</h2>
-            <Link className = "movie-home-button" to="/">Go To Shows</Link>
+            <Link className = "HomeLink-shows" to="/">
+              <h2 className="HomeLink">Chernobyl</h2>
+              <img src= {process.env.PUBLIC_URL + '/ChernobylTV_Logo.png'}
+                   alt="Chernobyl TV Logo"
+                   className="logo-image"/>
+            </Link>
+            <div className="spacer">
+              <NavLink className = "movie-home-button" to="/">Shows</NavLink>
+              <NavLink className = "movie-home-button" to="/movie">Movies</NavLink>
+              {/* <LoginButton /> */}
+            </div>
           </nav>
+
         <div className="search-wrapper-movie">
           <input className="Search" type="text" placeholder="Search" name="query"
             value={query} onChange={(e) => setQuery(e.target.value)}/>
@@ -39,25 +51,39 @@ export default function MoviesNavbar() {
         </div>
       </form>
 
-      <div>
-      {movies.map(movies => (
-        <div className="movies--card" key={movies.id}>
-          <img onClick={() => handleMovieClick(movies.id)}
-          src={`https://image.tmdb.org/t/p/w500/${movies.poster_path}`}
-          alt={movies.title}
-          width="250px"
-          />
+        {movies.length > 0 && (
+          <div className="search-results-container">
+            <h1 className="search-results-title" >Search Results
+            <button onClick={() => setMovies([])} className="close-search-results">X</button>
+            </h1>
+            <ul className="search-items-container">
+              {movies.map(movies => (
+                <li className="search-result-item" key={movies.id}>
+                  <div className="show-item">
+                    <img onClick={() => handleMovieClick(movies.id)}
+                      src={movies.poster_path ?
+                        `https://image.tmdb.org/t/p/w500/${movies.poster_path}` :
+                        `${process.env.PUBLIC_URL}/NoImage.png`}
+                      alt={movies.title}
+                      width="250px"
+                      className="search-result-image"
+                    />
+                    <p className="search-result-title">{movies.title}</p>
+                  </div>
+                </li>
+              ))}
+            </ul>
           </div>
-      ))}
-        </div>
-      {selectedMovie && ( // Render selected movie details if available
+        )}
+
+          {selectedMovie && ( // Render selected movie details if available
         <div>
           <h3>{selectedMovie.title}</h3>
           <p>{selectedMovie.description}</p>
           {/* Display other details of the selected movie */}
         </div>
+
       )}
       </>
-
   )
-      }
+}

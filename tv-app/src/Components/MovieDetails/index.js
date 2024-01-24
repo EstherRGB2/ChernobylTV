@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams, Link, NavLink} from 'react-router-dom';
 import Youtube from 'react-youtube'
 import './MovieDetails.css'
-import LoginButton from '../LoginButton'
+// import LoginButton from '../LoginButton'
 export default function MovieDetails() {
 const { movieId } = useParams();
 const [ movie, setMovie ] = useState(null)
@@ -42,7 +42,7 @@ return (
       <div className="spacer">
         <NavLink className = "movie-home-button" to="/" >Shows</NavLink>
         <NavLink className = "movie-home-button" to="/movie" >Movies</NavLink>
-        <LoginButton />
+        {/* <LoginButton /> */}
       </div>
 
       </nav>

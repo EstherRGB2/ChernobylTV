@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import ShowSearchResults from '../ShowSearchResults';
-import LoginButton from '../LoginButton'
+// import LoginButton from '../LoginButton'
 
 function ShowsNavbar() {
 
@@ -21,7 +21,7 @@ function ShowsNavbar() {
           <div className="spacer">
               <NavLink className = "movie-home-button" to="/" >Shows</NavLink>
               <NavLink className = "movie-home-button" to="/movie" >Movies</NavLink>
-              <LoginButton />
+              {/* <LoginButton /> */}
           </div>
         </div>
 
